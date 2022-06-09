@@ -1,0 +1,49 @@
+body{
+    background-color: #F6FBF4;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+h1{
+    color:#990000;
+}
+.navbar navbar-expand-lg navbar-light bg-light{
+
+    background-color: #FFDAAF;
+}
+
+.container-fluid{
+    background-color: #85586F;
+    padding-right: 20%;
+    padding-left: 30%;
+}
+.navbar-light .navbar-brand{
+    color: white;
+}
+
+.nav-link active{
+    color: white;
+    padding: 10px;
+}
+.navbar-light .navbar-nav .nav-link.active{
+    color: white;
+    padding:10px;
+}
+.navbar-light .navbar-nav .nav-link{
+    color:white;
+    padding:10px;
+}
+
+#profile{
+    border-radius: 100%;
+    margin-left:30%;
+    margin-right:30%;
+}
+#link{
+    color:#4B8673;
+
+}
+.text{
+    padding-top: 20px;
+    padding-bottom:20px;
+    margin-left: 40%;
+}

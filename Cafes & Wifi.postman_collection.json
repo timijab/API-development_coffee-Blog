@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "3362507e-f0fd-4caa-9a2b-a09c844ea39a",
+		"name": "Cafes & Wifi",
+		"description": "# Introduction\n\nThis API is built by Isaac Afolayan to give developers the oppurtunity to find coffee locations close to their customer locations.\n\n# Overview\n\nThe url with <> braces should be manually replaced and those after the ? are key word, value pairs.\n\n# Authentication\n\nWhat is the preferred way of using the API?\n\n# Error Codes\n\nWe use http codes to indicate errors.\n\n# Rate limit\n\nIs there a limit to the number of requests a user can send?",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21261932"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000 /random",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000 /random",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000 ",
+					"path": [
+						"random"
+					]
+				},
+				"description": "Generate a random cafe shop"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000 /all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000 /all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000 ",
+					"path": [
+						"all"
+					]
+				},
+				"description": "request for all cafe shops in the database"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/search/<location>",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/search/<location>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"search",
+						"<location>"
+					]
+				},
+				"description": "<location> is replaced by the location of the desired shop loaction"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/search?loc=Clerkenwell",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/search?loc=Clerkenwell",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "loc",
+							"value": "Clerkenwell"
+						}
+					]
+				},
+				"description": "alternate to <location>. loc =location"
+			},
+			"response": []
+		},
+		{
+			"name": "To delete any entry",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/delete/TopSecretAPIKey?entry_number=32",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"delete",
+						"TopSecretAPIKey"
+					],
+					"query": [
+						{
+							"key": "entry_number",
+							"value": "32"
+						}
+					]
+				},
+				"description": "This api request deletes any entry in the database with correct api_key or password"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:5000/delete/TopSecretAPIKey?entry_number=22",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/update-price/<int:cafe_id>?price=30",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"update-price",
+								"<int:cafe_id>"
+							],
+							"query": [
+								{
+									"key": "price",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "To patch change of price on any entry",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/update-price/22?price=£300",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"update-price",
+						"22"
+					],
+					"query": [
+						{
+							"key": "price",
+							"value": "£300",
+							"description": "22 represents entry id in the database"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "To add to the database",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/add?name=zamani&map_url=www.google.com&img_url=www.google.com&location=Mando&has_sockets=1&has_toilets=1&has_wifi=1&can_take_calls=1&coffee_price=300",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"add"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "zamani"
+						},
+						{
+							"key": "map_url",
+							"value": "www.google.com"
+						},
+						{
+							"key": "img_url",
+							"value": "www.google.com"
+						},
+						{
+							"key": "location",
+							"value": "Mando"
+						},
+						{
+							"key": "has_sockets",
+							"value": "1"
+						},
+						{
+							"key": "has_toilets",
+							"value": "1"
+						},
+						{
+							"key": "has_wifi",
+							"value": "1"
+						},
+						{
+							"key": "can_take_calls",
+							"value": "1"
+						},
+						{
+							"key": "coffee_price",
+							"value": "300"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
